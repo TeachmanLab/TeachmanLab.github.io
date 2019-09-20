@@ -74,8 +74,8 @@ h2, h3, h4, h5,
 				padding-right: 20px;
 
 				&:hover {
-					background: $primary;
-					color: $white;
+					background: transparent;
+					color: #4ECCA3;
 				}
 				opacity: 1!important;
 				@include media-breakpoint-down(md) {
@@ -121,14 +121,14 @@ h2, h3, h4, h5,
 				}
 				&.cta-colored {
 					span {
-						border-color: $primary;
+						border-color: $white;
 					}
 				}
 			}
 			&.active {
-				background: $primary;
+				background: #F8F8F8;
 				> a {
-					color: $white;
+					color: #F8F8F8;
 				}
 			}
 		}
@@ -154,7 +154,8 @@ h2, h3, h4, h5,
 		.nav-item {
 			&.active {
 				> a {
-					color: $primary!important;
+					color:#000000!important;
+					background:#FFFFFF;
 				}
 			}
 		}
@@ -190,9 +191,9 @@ h2, h3, h4, h5,
 		.nav-link {
 			padding-top: .9rem!important;
 			padding-bottom: .9rem!important;
-			color: $black!important;
+			color: #4ECCA3;
 			&.active {
-				color: $primary!important;
+				color: #4ECCA3;
 			}
 		}
 		&.awake {
@@ -204,13 +205,14 @@ h2, h3, h4, h5,
 		}
 
 		.navbar-brand {
-			color: $black;
+			color: black;
 		}
 
 	}
 }
 
 .navbar-brand {
+	color: #F8F8F8;
 	text-transform: uppercase;
 	letter-spacing: .1em;
 }
@@ -353,21 +355,21 @@ h2, h3, h4, h5,
 		outline: none;
 	}
 	&.btn-primary {
-		background: $primary;
-		border: 2px solid $primary;
+		background: lightgrey	;
+		border: 3px solid $primary;
 		color: $black;
 		&:hover {
-			border: 2px solid $primary;
-			background: transparent;
+			border: 3px solid $primary;
+			background: darkgrey;
 			color :$primary;
 		}
 		&.btn-outline-primary {
-			border: 2px solid $primary;
-			background: transparent;
+			border: 3px solid $primary;
+			background: lightgrey;
 			color :$primary;
 			&:hover {
-				border: 2px solid transparent;
-				background: $primary;
+				border: 3px solid transparent;
+				background: darkgrey;
 				color :$black;
 			}
 		}
@@ -511,7 +513,7 @@ textarea.form-control {
 
 .ftco-footer {
 	font-size: 16px;
-	background: aliceblue;
+	background: #a7bed3;
 	border-top: 1px solid #eeeeee;
 	padding: 3em 0;
 	.ftco-footer-logo {
@@ -520,7 +522,7 @@ textarea.form-control {
 	}
 	.ftco-footer-widget {
 		h2 {
-			font-weight: normal;
+			font-weight: 500;
 		}
 	}
 	p {
@@ -737,7 +739,7 @@ textarea.form-control {
 // Map
 
 #map {
-	height: 400px;
+	height: 435px;
 	width: 100%;
 	@include media-breakpoint-down(md) {
 		height: 300px;
@@ -841,6 +843,17 @@ textarea.form-control {
 	}
 }
 
+p.lab {
+	font-size:16px;
+}
+
+span.labNames {
+	font-weight:500;
+}
+
+span.labTitle {
+	color:#606060;
+}
 
 .flip-container {
 	margin-bottom: 50px;

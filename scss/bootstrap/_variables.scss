@@ -45,7 +45,7 @@ $green:   #28a745 !default;
 $teal:    #20c997 !default;
 $cyan:    #17a2b8 !default;
 
-$primary: #4ECCA3 !default;
+$primary: #000000 !default;
 
 $colors: () !default;
 $colors: map-merge((
@@ -332,7 +332,7 @@ $table-caption-color:         $text-muted !default;
 //
 // Shared variables that are reassigned to `$input-` and `$btn-` specific variables.
 
-$input-btn-padding-y:         .375rem !default;
+$input-btn-padding-y:         .75rem !default;
 $input-btn-padding-x:         .75rem !default;
 $input-btn-line-height:       $line-height-base !default;
 
