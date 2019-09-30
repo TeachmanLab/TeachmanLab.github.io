@@ -15,13 +15,28 @@ body {
 	line-height: 1.5;
 	font-weight: 300;
 }
+
+
+p {
+	font-size: 18px;
+}
+
+.flip-back {
+	font-size: 40px;
+}
+
 a {
 	transition: .3s all ease;
 	color: $primary;
 	&:hover {
 		text-decoration: none;
-		color: $primary;
+		color: #ffcaaf;
 	}
+
+}
+
+.url {
+	color: dodgerblue;
 }
 
 .hangingindent {
@@ -75,8 +90,9 @@ h2, h3, h4, h5,
 
 				&:hover {
 					background: transparent;
-					color: #4ECCA3;
+					color: #ffcaaf;
 				}
+
 				opacity: 1!important;
 				@include media-breakpoint-down(md) {
 					padding-top: 10px;
@@ -86,7 +102,80 @@ h2, h3, h4, h5,
 				}
 			}
 
-			
+
+			&.ftco-seperator {
+				position: relative;
+				margin-left: 20px;
+				padding-left: 20px;
+				@include media-breakpoint-down(md) {
+					padding-left: 0;
+					margin-left: 0;
+				}
+				&:before {
+					position: absolute;
+					content: "";
+					top: 10px;
+					bottom: 10px;
+					left: 0;
+					width: 2px;
+					background: rgba($white, .05);
+					@include media-breakpoint-down(md) {
+						display: none;
+					}
+				}
+			}
+			&.cta {
+				> a {
+					padding-left: 0;
+					color: $white;
+					span {
+						border: 2px solid $white;
+						display: inline-block;
+						padding: 10px 20px;
+						border-radius: 4px;
+					}
+				}
+				&.cta-colored {
+					span {
+						border-color: $white;
+					}
+				}
+			}
+			&.active {
+				background: transparent;
+				> a {
+					color: #F8F8F8;
+				}
+			}
+		}
+	}
+
+
+	.navbar-nav {
+		> .nav-item-home {
+			> .nav-link-home {
+				font-size: 18px;
+				color: black;
+				padding-top: 30px;
+				padding-bottom: 30px;
+				padding-left: 10px;
+				padding-right: 20px;
+
+				&:hover {
+					background: transparent;
+					color: #F8F8F8;
+				}
+
+				opacity: 1!important;
+				@include media-breakpoint-down(md) {
+					padding-top: 10px;
+					padding-bottom: 10px;
+					padding-left: 0px;
+					padding-right: 0px;
+				}
+			}
+
+
 			&.ftco-seperator {
 				position: relative;
 				margin-left: 20px;
@@ -133,6 +222,10 @@ h2, h3, h4, h5,
 			}
 		}
 	}
+
+
+
+
 	.navbar-toggler {
 		border: none;
 		color: rgba(255,255,255,.5)!important;
@@ -224,10 +317,6 @@ h2, h3, h4, h5,
 }
 .ftco-cover {
   // background: lighten( $black, 10%);
-  @extend .bg-image;
-	background-image: url(../images/bg_1.jpg);
-    background-position: center center;
-	background-size: contain;
 
 	.ftco-heading {
 		font-size: 50px;
@@ -255,7 +344,6 @@ h2, h3, h4, h5,
 	}
 	a {
 		position: relative;
-		color: $white;
 	}
 	&.overlay {
 		position: relative;
@@ -271,6 +359,7 @@ h2, h3, h4, h5,
 	}
 	.ftco-vh-100 {
 		min-height: 700px!important;
+		color:#F8F8F8;
 	}
 }
 .ftco-slant {
@@ -529,7 +618,7 @@ textarea.form-control {
 		color: rgba($black, .3);
 	}
 	a {
-		color: rgba($black, .3);
+		color: rgba($black, .4);
 		&:hover {
 			color: $primary;
 		}
@@ -855,7 +944,17 @@ span.labTitle {
 	color:#606060;
 }
 
+span.list {
+	transition: .3s all ease;
+	color: darkgrey;
+	&:hover {
+		text-decoration: none;
+		color: #ffcaaf;
+	}
+}
+
 .flip-container {
+
 	margin-bottom: 50px;
 	-webkit-perspective: 1000;
 	-moz-perspective: 1000;
@@ -884,10 +983,22 @@ span.labTitle {
 	}
 
 
-	&, .front, .back {
+	&, .back {
 		width: 100%;
-		height: 427px;
+		height: 327px;
+		z-index: 2;
 	}
+	.front
+	{		width: 100%;
+		height: 327px;
+		z-index: 2;
+		background:aliceblue;
+	}
+
+
+
+
+
 	.flipper {
 		-webkit-transition: 0.6s;
 		-webkit-transform-style: preserve-3d;
@@ -956,15 +1067,15 @@ span.labTitle {
 			left: 0;
 			background: -moz-linear-gradient(top, transparent 0%, transparent 18%, rgba(0, 0, 0, 0.8) 99%, rgba(0, 0, 0, 0.8) 100%);
 			background: -webkit-linear-gradient(top, transparent 0%, transparent 18%, rgba(0, 0, 0, 0.8) 99%, rgba(0, 0, 0, 0.8) 100%);
-			background: linear-gradient(to bottom, transparent 0%, transparent 18%, rgba(0, 0, 0, 0.8) 99%, rgba(0, 0, 0, 0.8) 100%);
+			background: linear-gradient(to bottom, transparent 0%, transparent 18%, rgba(0, 0, 0, 0.8) 300%, rgba(0, 0, 0, 0.8) 100%);
 			filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#cc000000', GradientType=0);
 		}
 
 		.logo1
-		{	background:
-
-	url(https://mindtrails.virginia.edu/img/logo.png) 0 0 no-repeat;
-	}
+		{
+			background: url(http://davidwalsh.name/demo/dwflip.jpg) 0 0 no-repeat;
+			z-index: 2;
+		}
 
 		.logo2
 		{	background:
@@ -982,7 +1093,7 @@ span.labTitle {
 			right: 20px;
 			bottom: 20px;
 			h2, p {
-				color: $white;
+				color: $black;
 				margin: 0;
 				padding: 0;
 				line-height: 1.5;
@@ -999,7 +1110,7 @@ span.labTitle {
 	.back {
 		// background: lightblue;
 		// padding-top: 40px;
-		background: $white;
+		background: #b1d1fc;
 		box-shadow: 0 0 70px -10px rgba(0,0,0,.4);
 		-webkit-transform: rotateY(-180deg);
 	    -moz-transform: rotateY(-180deg);
@@ -1011,6 +1122,7 @@ span.labTitle {
 
 	.back p {
 		position: absolute;
+		margin: 20px 20px 20px 20px;
 		top: 20px;
 		left: 20px;
 		right: 20px;
