@@ -150,7 +150,7 @@ a {
 	color: $primary;
 	&:hover {
 		text-decoration: none;
-		color: #ffcaaf;
+		color: #0066EE;
 	}
 
 }
@@ -411,14 +411,16 @@ h2, h3, h4, h5,
 			margin-top: -130px;
 			background: $black !important;
 			box-shadow: 0 0 10px 0 rgba(0, 0, 0, .1);
-		}
+			@media screen and (min-width: 1199px) {
+				color: $white !important;
+			}
 
-		.nav-item {
-			&.active {
-				> a {
-					color: $white !important;
-					background: transparent;
-					word-spacing: 30px;
+			.nav-item {
+				&.active {
+					> a {
+						color: $black !important;
+						background: transparent;
+					}
 				}
 			}
 		}
