@@ -8124,12 +8124,7 @@ body {
     background: #F8F8F8;
   }
 }
-body .gallery {
-  display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  grid-template-rows: repeat(8, 5vw);
-  grid-gap: 15px;
-}
+
 body .header {
   text-align: center;
   padding: 32px;
@@ -8205,8 +8200,6 @@ body .column {
   padding: 0 4px;
 }
 body .column img {
-  margin-top: 30px;
-  margin-bottom: 60px;
   vertical-align: middle;
   width: 100%;
 }
@@ -8229,9 +8222,10 @@ body .column img {
   border-radius: 5px;
   cursor: pointer;
   transition: 0.3s;
-  margin-top: 50px;
-  padding-top: 30px;
-  padding-bottom: 15px;
+  padding-top: 0px;
+  padding-right: 30px;
+  padding-bottom: 0px;
+  padding-left: 0px;
 }
 
 #rotate {
@@ -8426,7 +8420,7 @@ grid.row {
 .column img {
   margin-top: 8px;
   vertical-align: middle;
-  width: 100%;
+  width: 200%;
 }
 
 /* Responsive layout - makes a two column-layout instead of four columns */
